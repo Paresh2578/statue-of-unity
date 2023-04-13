@@ -1,0 +1,466 @@
+  @import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+::selection{
+    background-color: #7A7A7A;
+    color: #FFF;
+}
+
+/* scroll */
+
+#scroll{
+    height: 2rem;
+    width: 3rem;
+    background-color: #1B1B1B;
+    color: aliceblue;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+#scroll a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#scrollDiv{
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+
+body{
+}
+
+.body{
+    /* position: fixed; */
+    top: 0px;
+    z-index: 2;
+}
+
+.menubar{
+   z-index: 5;
+   width: auto;
+   height: auto;
+   position:fixed;
+   top: 0px;
+}
+
+
+/* menubar */
+
+.menubar{
+    float: left;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    /* padding: 1vh; */
+    overflow-y: scroll;
+    height: 100vh;
+    display: none;
+}
+
+.menubar li{
+    list-style: none;
+    padding: 2vh;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid gray;
+}
+
+.menubar li:hover{
+    color: #6EC1E4;
+}
+
+.menubar li:hover i{
+    transform: rotate(-90deg);
+    transition: 0.1s linear;
+}
+
+
+ul ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.menubar ul li .dropdwon{
+    display: none;
+}
+
+.menubar ul li:hover .dropdwon{
+    display: block;
+    margin-top: 1rem;
+}
+
+/* navber */
+
+nav{
+    background-color:  #FF6600;
+    width: 100vw;
+    padding: 0vw 2vw;
+    height: 18vh;
+    position: sticky;
+    top: 0vh;
+    /* top: 0px; */
+    /* display: flex; */
+}
+
+ .logo{
+    float: left;
+    padding-left: 1vh;
+    /* display: flex; */
+}
+nav .menu{
+    position: relative;
+    right: 5vw;
+    top:7vh ;
+    font-size: 5vh;
+    float: right;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/* .container */
+
+.container{
+    background: #000;
+    overflow-x: hidden;
+}
+
+.container .vidoes{
+    float: left;
+    width: 55%;
+    background: #000;
+    font-weight: 1px;
+    padding: 3vh;
+    height: 450vh;
+}
+
+.container .vidoes p{
+    font-family: "Ubuntu", Sans-serif;
+    color: #FFF;
+    font-size: 4vh;
+    padding: 3vh;
+    letter-spacing: 0.3rem;
+}
+
+.vidoes .vidoesItem{
+    margin-top: 5vh;
+}
+
+.vidoesItem video{
+    width: 100%;
+    padding: 4vh;
+}
+.vidoesItem img{
+    padding: 4vh;
+}
+
+.vidoes .vidoesItem span{
+    font-size: 2.9vh;
+    letter-spacing: 0.1;
+    color:#FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 4.5vh;
+    padding: 4vh;
+}
+
+.container .Information{
+    float: left;
+    width: 45%;
+    padding: 0vw 5vw;
+    background: #000;
+    border-top:5vh solid #f58634;
+    border-bottom:5vh solid #f58634;
+    color: #547473;
+    background: rgb(255, 230, 0);
+    overflow-y: scroll;
+}
+
+ ::-webkit-scrollbar{
+    display: none;
+}
+
+.Information p{
+    font-family: "Ubuntu", Sans-serif;
+    font-size: 4vh;
+    letter-spacing: 1vh;
+    text-align: center;
+    line-height: 5vh;
+}
+
+@media (max-width: 1132px){
+     nav{
+        height: 14vh;
+     }
+
+     nav .logo{
+         height: 15vh;
+         size: 20vh;
+     }
+
+     nav .menu{
+        font-size: 1.5rem;
+        justify-content: center ;
+        align-items: center;
+     }
+
+    .container .vidoes{
+        float: none;
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .container .Information{
+        float: none;
+        width: 100%;
+    }
+
+    .Information p{
+        font-size: 2vh;
+        letter-spacing: 0.5vh;
+        line-height: 2.5vh;
+    }
+
+    .vidoes .vidoesItem span{
+        font-size: 1.9vh;
+        letter-spacing: 0.1;
+        line-height: 2.5vh;
+        padding: 2vh;
+    }
+}
+
+/* 360* img */
+
+.container section{
+   padding: 1vh;
+   padding-right: 0px;
+   width: 100vw;
+}
+
+.container section iframe{
+   height: 70vh;
+   width: 100vw;
+}
+
+@media (max-width:1057px){
+    .container section{
+        /* width: 50vw; */
+    }
+}
+
+
+/* state of unit .Information */
+
+.stateOfUnitInformation{
+    background: #4054B2;
+    color: #FFF;
+    overflow-x: hidden;
+}
+
+
+.stateOfUnitInformation .stateOfUnitName h1{
+    font-family: Arial, Helvetica, sans-serif;
+    padding:3rem 3rem;
+    float: left;
+    width: 40%;
+    text-align: center;
+    letter-spacing: 0.3vh;
+}
+
+
+
+.stateOfUnitInformation .stateOfUnitHeight p{
+    font-family: "Ubuntu", Sans-serif;
+    float: left;
+    width: 60%;
+    text-align: center;
+    font-size: 5vh;
+    letter-spacing: 1vh;
+    padding: 2rem 4rem;
+    color: #f2eac1;
+}
+
+.stateOfUnitInformation .status{
+    width: 100vw;
+    display: flex;
+    padding: 3rem 5rem;
+}
+
+.stateOfUnitInformation .status .statusItem{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 4vh;
+}
+
+.statusItem img{
+    height: 100%;
+    width: 100%;
+}
+
+.statusItem .india{
+    float: left;
+    width: 20vh;
+    height: 20vw;
+}
+
+.statusItem .china{
+    float: left;
+    width: 40vh;
+    height: 40vw;
+}
+
+.statusItem .japan{
+    float: left;
+}
+
+.statusItem .usa{
+    float: left;
+}
+
+.statusItem .russia{
+    float: left;
+}
+
+.statusItem .brazil{
+    float: left;
+}
+
+@media (max-width: 1132px){
+    .status{
+        padding: 0rem;
+    }
+
+    .status .statusItem{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .stateOfUnitInformation .status{
+        padding: 3rem 0rem;
+    }
+
+    .stateOfUnitInformation .stateOfUnitHeight p{
+        float: none;
+        text-align: center;
+        width: 100%;
+        font-size: 2vh;
+    }
+
+    .stateOfUnitInformation .stateOfUnitName h1{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .stateOfUnitInformation .status{
+        display: block;
+    }
+
+    .status  .statusItem img{
+        height: 70vh;
+        width: 60vw;
+    }
+}
+
+
+/* <!--sardar vallbhbhai patel histroy */
+
+.container .sardarvalbhbhaiPatelHistroy{
+   padding: 2rem 5rem;
+}
+
+.sardarvalbhbhaiPatelHistroy #title{
+    text-align: center;
+    font-size: 5vh;
+    font-family: "Ubuntu", Sans-serif;
+    letter-spacing: 1vh;
+    padding-bottom: 5rem;
+}
+
+.sardarvalbhbhaiPatelHistroy .sardarVallbhbhaiPatelImg{
+    height: 100vh;
+    float: left;
+    width: 50%;
+}
+
+.sardarvalbhbhaiPatelHistroy .sardarvalbhbhaiPatelInformation{
+    float: left;
+    width: 50%;
+    height: 100vh;
+}
+
+.sardarvalbhbhaiPatelInformation p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f2eac1;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    text-justify: distribute;
+}
+
+@media (max-width: 1132px){
+    .sardarvalbhbhaiPatelHistroy #title{
+        font-size: 2vh;
+        line-height: 3rem;
+    }
+
+    .container .sardarvalbhbhaiPatelHistroy{
+        padding: 2rem 0rem;
+     }
+
+    .status .statusItem img{
+        height: 30vh;
+    }
+    
+
+    .sardarvalbhbhaiPatelHistroy .sardarvalbhbhaiPatelInformation{
+        float: none;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+
+
+    .sardarvalbhbhaiPatelHistroy .sardarVallbhbhaiPatelImg{
+        float: none;
+        width: 100%;
+    }
+
+    .stateOfUnitInformation{
+        background: #4054B2;
+        height: 100vh;
+        color: #FFF;
+    }
+
+    .sardarvalbhbhaiPatelInformation p{
+        padding-left: 2rem;
+    }
+
+
+}
+
+/* footer */
+
+.footer{
+    background-color: #1B1B1B;
+    text-align: center;
+    color: darkgray;
+    font-family: sans-serif;
+    padding: 1rem;
+}
+
